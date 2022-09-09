@@ -1,4 +1,28 @@
 .content {
+    font-family: 'Inter', sans-serif;
     max-width: 750px;
     margin: 0 auto;
+    background-color: #202020;
+}
+
+// Header
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+
+    &__help-blog{
+        color: #fff;
+        display: flex;
+        align-items: center;
+
+        &__question{
+            margin-left: 10px;
+            height: 24px;
+            width: 24px;
+            cursor: pointer;
+        }
+    }
 }

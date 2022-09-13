@@ -52,7 +52,48 @@
 }
 
 .event-information{
+    margin-top: 20px;
+
+    &__city{
+        display: flex;
+        align-items: center;
+
+        p{
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 23px;
+            letter-spacing: 1px;
+            opacity: 0.9;
+            margin-left: 12px;
+        }
+    }
     
+    &__title{
+        margin: 0;
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    &__btns-wrap{
+        display: flex;
+        
+        &__day, 
+        &__time{
+            display: flex;
+            align-items: center;
+            padding: 8.5px 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(32px);
+            border-radius: 20px;
+
+            p{
+                display: inline;
+                margin: 0;
+                margin-left: 8px;
+            }
+        }
+    }
 }
 
 

@@ -1,8 +1,10 @@
 .content {
-    font-family: 'Inter', sans-serif;
+    padding: 0 16px;
     max-width: 750px;
     margin: 0 auto;
     background-color: #202020;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
 }
 
 // Header
@@ -11,18 +13,48 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 20px;
+    padding: 5px 0;
 
     &__help-blog{
-        color: #fff;
         display: flex;
         align-items: center;
 
         &__question{
-            margin-left: 10px;
+            margin-left: 8px;
             height: 24px;
             width: 24px;
             cursor: pointer;
         }
     }
 }
+
+// Information block
+
+.event-information-wrapper {
+    margin-top: 17px;
+
+    &__banner-wrap {
+        position: relative;
+        height: 175px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 12px;
+    }
+
+    &__blur {
+        display: flex;
+        justify-content: center;
+        background: rgb(161 161 161 / 7%);
+        backdrop-filter: blur(8px);
+        border-radius: 12px;
+    }
+
+}
+
+.event-information{
+    
+}
+
+
+
+

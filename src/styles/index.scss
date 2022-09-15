@@ -237,6 +237,7 @@ body {
     input {
         position: relative;
         top: -50px;
+        display: block;
         opacity: 0;
         height: 0;
         border: 1px solid rgba(255, 255, 255, 0.2);
@@ -251,6 +252,7 @@ body {
         width: 100%;
         transition: all 0.3s;
         z-index: -1;
+        margin-top: 29px;
     }
 
     input.active {

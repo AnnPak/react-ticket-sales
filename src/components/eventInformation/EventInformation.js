@@ -18,11 +18,11 @@ const EventInformationBanner = () => {
 }
 
 const EventInformationBlock = (data) => {
-    // const { title, description } = data.data;
-    console.log(data)
+    const { title, description } = data.data;
+
     return (
         <div className='event-information'>
-            {/* <h2 className='event-information__title'>{title} </h2> */}
+            <h2 className='event-information__title'>{title} </h2>
 
             <div className='event-information__city'>
                 <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,0 +1,10 @@
+{
+    "events": [
+        {
+            "id": 658,
+            "name": "Первое событие",
+            "description": "descr"
+        }
+     
+    ]
+}

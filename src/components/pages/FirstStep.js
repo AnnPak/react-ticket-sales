@@ -16,12 +16,10 @@ export const FirstStep = () => {
     }, [elemId])
 
     const updateEvent = () => {
-        console.log(elemId);
         getEvent(elemId).then(onElementLoad);
     }
 
     const onElementLoad = (data) => {
-        console.log('lol');
         setData(data);
     }
 

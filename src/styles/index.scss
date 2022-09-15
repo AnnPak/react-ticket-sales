@@ -1,3 +1,17 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #000;
+}
+
 .content {
     padding: 0 16px;
     max-width: 750px;
@@ -9,17 +23,21 @@
 
 // Header
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 0;
 
-    &__help-blog{
+    &__help-blog {
         display: flex;
         align-items: center;
 
-        &__question{
+        p {
+            font-size: 13px;
+        }
+
+        &__question {
             margin-left: 8px;
             height: 24px;
             width: 24px;
@@ -51,14 +69,14 @@
 
 }
 
-.event-information{
+.event-information {
     margin-top: 20px;
 
-    &__city{
+    &__city {
         display: flex;
         align-items: center;
 
-        p{
+        p {
             font-weight: 400;
             font-size: 12px;
             line-height: 23px;
@@ -67,19 +85,19 @@
             margin-left: 12px;
         }
     }
-    
-    &__title{
+
+    &__title {
         margin: 0;
         font-weight: 600;
         font-size: 26px;
         line-height: 32px;
     }
 
-    &__btns-wrap{
+    &__btns-wrap {
         display: flex;
-        
-        &__day, 
-        &__time{
+
+        &__day,
+        &__time {
             display: flex;
             align-items: center;
             padding: 8.5px 12px;
@@ -87,15 +105,160 @@
             backdrop-filter: blur(32px);
             border-radius: 20px;
 
-            p{
+            p {
                 display: inline;
                 margin: 0;
                 margin-left: 8px;
+                font-weight: 400;
+                font-size: 10px;
+                line-height: 13px;
+                color: #DAEFFF;
+                opacity: 0.6;
             }
+        }
+
+        &__day {
+            margin-right: 8px;
         }
     }
 }
 
+// Form
 
+.form-field {
+    background: rgba(44, 44, 45, 0.3);
+    border: 1px solid rgba(132, 211, 255, 0.43);
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 16px;
+    font-family: 'Roboto Mono', monospace;
+    ;
+    font-weight: 600;
 
+    &:first-child {
+        margin-top: 24px;
+    }
 
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 47px;
+    }
+
+    &__price {
+        font-size: 24px;
+    }
+
+}
+
+.counter {
+    display: flex;
+
+    &__decr,
+    &__incr {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        border: none;
+        cursor: pointer;
+
+        &.disabled {
+            cursor: default;
+            pointer-events: none;
+            border: none;
+        }
+    }
+
+    &__decr {
+        border: 1px solid #FFFFFF;
+        background: #3A3B3E;
+    }
+
+    &__incr {
+        background: linear-gradient(90deg, #F2A346 0%, #EE7393 100%);
+    }
+
+    &__value {
+        background: none;
+        border: none;
+        font-family: 'Roboto Mono', monospace;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 24px;
+        max-width: 55px;
+        text-align: center;
+        cursor: default;
+        pointer-events: none;
+        padding-left: 7px;
+        color: #fff;
+    }
+
+}
+
+.ticket-form {
+    &__information {
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 23px;
+        letter-spacing: 1px;
+        color: #FFFFFF;
+        opacity: 0.32;
+        margin-top: 17px;
+    }
+}
+
+.coupon-block {
+    position: relative;
+    border: 1px solid rgba(224, 224, 224, 0.06);
+    border-radius: 8px;
+    padding: 18px 20px;
+
+    &__dropdown {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__dropdown button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    &__dropdown button.show {
+        transform: scale(1, -1);
+    }
+
+    input {
+        position: relative;
+        top: -50px;
+        opacity: 0;
+        height: 0;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+        padding: 0;
+        letter-spacing: -0.2px;
+        color: #686868;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        background: none;
+        width: 100%;
+        transition: all 0.3s;
+        z-index: -1;
+    }
+
+    input.active {
+        top: 0;
+        height: auto;
+        opacity: 1;
+        z-index: 1;
+        padding: 16px;
+    }
+
+}

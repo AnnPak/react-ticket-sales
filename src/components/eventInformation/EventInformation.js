@@ -35,7 +35,7 @@ const EventInformationBlock = () => {
             </div>
 
             <div className='event-information__btns-wrap'>
-                <div class="event-information__btns-wrap__day">
+                <div className="event-information__btns-wrap__day">
                     <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g opacity="0.9">
                             <rect x="0.5" y="1.6322" width="11" height="10.3684" rx="1.5" stroke="#A1FFF4" stroke-linecap="round" stroke-linejoin="round" />
@@ -48,7 +48,7 @@ const EventInformationBlock = () => {
                     <p>Month, Day</p>
                 </div>
 
-                <div class="event-information__btns-wrap__time">
+                <div className="event-information__btns-wrap__time">
                     <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g opacity="0.9">
                             <circle cx="6" cy="6.5" r="5.5" stroke="#A1FFF4" />

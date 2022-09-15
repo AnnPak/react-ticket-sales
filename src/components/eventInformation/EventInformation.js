@@ -57,9 +57,9 @@ const EventInformationBlock = (data) => {
                             <path d="M6 2.90039V6.50039H7.8" stroke="#A1FFF4" stroke-linecap="round" stroke-linejoin="round" />
                         </g>
                     </svg>
-                    
+
                     <p>Time Start - Time End</p>
-                    
+
                 </div>
             </div>
 
@@ -70,10 +70,12 @@ const EventInformationBlock = (data) => {
 
 
 const EventInformation = ({ data }) => {
+    const { title, description } = data;
     return (
         <section className='event-information-wrapper'>
-            <EventInformationBanner data={data}/>
-            <EventInformationBlock data={data}/>
+            <EventInformationBanner data={data} />
+            <EventInformationBlock data={data} />
+
         </section>
     )
 }

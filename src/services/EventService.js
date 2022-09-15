@@ -7,9 +7,9 @@ export const useEventServise = () => {
     const {request} = useHttp();
 
     const getEvent = async (id) => {
-        const res = await request(`https://events2.free.beeceptor.com`);
-        const newArr = res.events.filter(el => el.id == id)
-        return _transformEvents(newArr[0]);
+        let res = await request(`https://rupor.biz/api/event_info/${id}`);
+
+        return _transformEvents(res);
     }
 
     const _transformEvents = (event) => {

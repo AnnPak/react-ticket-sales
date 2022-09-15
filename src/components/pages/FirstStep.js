@@ -7,7 +7,10 @@ import { setFirstStateContent } from '../../utils/setFirstStateContent';
 export const FirstStep = () => {
     const { elemId } = useParams();
 
-    const [data, setData] = useState(null);
+    const [data, setData] = useState({
+        title: '',
+        desctription: '',
+    });
 
     const { getEvent } = useEventServise();
 
